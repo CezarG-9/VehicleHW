@@ -138,6 +138,9 @@ public class Main {
 /* 1. Consumption per 100Km not working as intended; || Partially solved, issue came from the gearShift method.
 * Only partially solved because I don't know how to set consumption per car, not per model (as in the fuel consumption
 * is set per car brand ~ Renault, Toyota ~ instead of being set per car model ~ Arkana, Megane, Corolla, Yaris ~)
+*
+* - All car models have a setter on consumptionPer100Km, but it has no effect. idk why?!
+*
 *  2. Because consumption not working as intended, tireSize & gear doesn't have any effect over fuel consumption; ||
 * I'll attempt sorting this optional points later. (after finishing the other homeworks)
 *  3. Available fuel after the drive hasn't been updated to the new amount of fuel left (still shows the fuel tank size);
