@@ -61,9 +61,9 @@ abstract class Car extends Vehicle {
 
     private void adjustConsumptionForGear() {
         if (currentGear > 1) {
-            consumptionPer100Km *= 0.95;
+            consumptionPer100Km *= 0.95f;
         } else if (currentGear < 1) {
-            consumptionPer100Km *= 1.05;
+            consumptionPer100Km *= 1.05f;
         }
     }
 
