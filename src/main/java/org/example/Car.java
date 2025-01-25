@@ -1,9 +1,9 @@
 package org.example;
 
 abstract class Car extends Vehicle {
-    private final float fuelTankSize;
-    private final String fuelType;
-    private final int maxGears;
+    private float fuelTankSize;
+    private String fuelType;
+    private int maxGears;
     private float consumptionPer100Km;
     private float currentFuelConsumption;
     private int currentGear;
@@ -15,7 +15,7 @@ abstract class Car extends Vehicle {
         this.currentGear = 0;
         this.currentFuelConsumption = 0;
         this.consumptionPer100Km = consumptionPer100Km;
-        this.maxGears = 6;
+        this.maxGears = maxGears;
         this.fuelType = fuelType;
         this.fuelTankSize = fuelTankSize;
     }
@@ -55,15 +55,6 @@ abstract class Car extends Vehicle {
             System.out.println("Invalid gear");
         } else {
             currentGear = gear;
-            adjustConsumptionForGear();
-        }
-    }
-
-    private void adjustConsumptionForGear() {
-        if (currentGear > 1) {
-            consumptionPer100Km *= 0.95f;
-        } else if (currentGear < 1) {
-            consumptionPer100Km *= 1.05f;
         }
     }
 
@@ -101,14 +92,6 @@ abstract class Car extends Vehicle {
 
     public void setConsumptionPer100Km(float consumptionPer100Km) {
         this.consumptionPer100Km = consumptionPer100Km;
-    }
-
-    public void setCurrentFuelConsumption(float currentFuelConsumption) {
-        this.currentFuelConsumption = currentFuelConsumption;
-    }
-
-    public void setCurrentGear(int currentGear) {
-        this.currentGear = currentGear;
     }
 
     public void setTireSize(int tireSize) {

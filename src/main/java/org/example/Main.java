@@ -14,7 +14,7 @@ public class Main {
         car.shiftGear(4);
         car.drive(0.54f);
         car.shiftGear(5);
-        car.drive(18);
+        car.drive(18f);
         car.shiftGear(6);
         car.drive(189.4f);
         car.shiftGear(5);
@@ -28,11 +28,13 @@ public class Main {
         car.stop();
 
         System.out.println(car);
-        System.out.println("Consumption per 100Km: " + car.getConsumptionPer100Km());
-        System.out.println("Avg. fuel consumption: " + car.getAverageFuelConsumption());
-        System.out.println("Avaialable fuel: " + car.getAvailableFuel());
-        System.out.println("Consumtpion for this drive: " + car.getCurrentFuelConsumption());
-
+        System.out.println("Consumption per 100Km: " + car.getConsumptionPer100Km() + " litters per 100 km.");
+        System.out.println("Consumption for this drive: " + car.getCurrentFuelConsumption() + " litters.");
+        System.out.println("Avg. fuel consumption: " + car.getAverageFuelConsumption() + " litters.");
+        System.out.println("Available fuel: " + car.getAvailableFuel() + " litters.");
+        System.out.println("Consumption for this drive: " + car.getCurrentFuelConsumption());
+        System.out.println("Fuel type: " + car.getFuelType());
+        System.out.println("Tank size: " + car.getFuelTankSize());
 
         Car secondCar = new Megane(40.0f, "r2210-3512Meg512");
         secondCar.start();
@@ -61,9 +63,10 @@ public class Main {
 
         System.out.println(secondCar);
         System.out.println("Consumption per 100Km: " + secondCar.getConsumptionPer100Km());
+        System.out.println("Consumption for this drive: " + secondCar.getCurrentFuelConsumption());
         System.out.println("Avg. fuel consumption: " + secondCar.getAverageFuelConsumption());
-        System.out.println("Avaialable fuel: " + secondCar.getAvailableFuel());
-        System.out.println("Consumtpion for this drive: " + secondCar.getCurrentFuelConsumption());
+        System.out.println("Available fuel: " + secondCar.getAvailableFuel());
+        System.out.println("Consumption for this drive: " + secondCar.getCurrentFuelConsumption());
 
 
         Car thirdCar = new Corolla(40.0f, "T3323-1123Cor511");
@@ -93,9 +96,10 @@ public class Main {
 
         System.out.println(thirdCar);
         System.out.println("Consumption per 100Km: " + thirdCar.getConsumptionPer100Km());
+        System.out.println("Consumption for this drive: " + thirdCar.getCurrentFuelConsumption());
         System.out.println("Avg. fuel consumption: " + thirdCar.getAverageFuelConsumption());
-        System.out.println("Avaialable fuel: " + thirdCar.getAvailableFuel());
-        System.out.println("Consumtpion for this drive: " + thirdCar.getCurrentFuelConsumption());
+        System.out.println("Available fuel: " + thirdCar.getAvailableFuel());
+        System.out.println("Consumption for this drive: " + thirdCar.getCurrentFuelConsumption());
 
         Car fourthCar = new Yaris(40.0f, "t3324-6561Yar355");
         fourthCar.start();
@@ -124,15 +128,17 @@ public class Main {
 
         System.out.println(fourthCar);
         System.out.println("Consumption per 100Km: " + fourthCar.getConsumptionPer100Km());
+        System.out.println("Consumption for this drive: " + fourthCar.getCurrentFuelConsumption());
         System.out.println("Avg. fuel consumption: " + fourthCar.getAverageFuelConsumption());
-        System.out.println("Avaialable fuel: " + fourthCar.getAvailableFuel());
-        System.out.println("Consumtpion for this drive: " + fourthCar.getCurrentFuelConsumption());
+        System.out.println("Available fuel: " + fourthCar.getAvailableFuel());
+        System.out.println("Consumption for this drive: " + fourthCar.getCurrentFuelConsumption());
     }
 }
 
-/* 1. Consumption per 100Km not working as intended;
-*  2. Because consumption not working as intended, tireSize & gear doesn't have any effect over fuel consumption;
+/* 1. Consumption per 100Km not working as intended; || Partially solved, issue came from the gearShift method.
+* Only partially solved because I don't know how to set consumption per car, not per model (as in the fuel consumption
+* is set per car brand ~ Renault, Toyota ~ instead of being set per car model ~ Arkana, Megane, Corolla, Yaris ~)
+*  2. Because consumption not working as intended, tireSize & gear doesn't have any effect over fuel consumption; ||
+* I'll attempt sorting this optional points later. (after finishing the other homeworks)
 *  3. Available fuel after the drive hasn't been updated to the new amount of fuel left (still shows the fuel tank size);
-*  4. All cars have identical output, even if initial settings are different.
-*
 * */

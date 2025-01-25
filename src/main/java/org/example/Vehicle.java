@@ -17,8 +17,4 @@ abstract class Vehicle {
     public float getAvailableFuel() {
         return availableFuel;
     }
-
-    public String getChassisNumber() {
-        return chassisNumber;
-    }
 }
