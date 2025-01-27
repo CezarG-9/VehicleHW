@@ -17,4 +17,8 @@ abstract class Vehicle {
     public float getAvailableFuel() {
         return availableFuel;
     }
+
+    public void setAvailableFuel(float fuelSpent) {
+        this.availableFuel -= fuelSpent;
+    }
 }

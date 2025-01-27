@@ -30,11 +30,8 @@ public class Main {
         System.out.println(car);
         System.out.println("Consumption per 100Km: " + car.getConsumptionPer100Km() + " litters per 100 km.");
         System.out.println("Consumption for this drive: " + car.getCurrentFuelConsumption() + " litters.");
-        System.out.println("Avg. fuel consumption: " + car.getAverageFuelConsumption() + " litters.");
         System.out.println("Available fuel: " + car.getAvailableFuel() + " litters.");
-        System.out.println("Consumption for this drive: " + car.getCurrentFuelConsumption());
-        System.out.println("Fuel type: " + car.getFuelType());
-        System.out.println("Tank size: " + car.getFuelTankSize());
+        System.out.println("");
 
         Car secondCar = new Megane(40.0f, "r2210-3512Meg512");
         secondCar.start();
@@ -62,12 +59,10 @@ public class Main {
         secondCar.stop();
 
         System.out.println(secondCar);
-        System.out.println("Consumption per 100Km: " + secondCar.getConsumptionPer100Km());
-        System.out.println("Consumption for this drive: " + secondCar.getCurrentFuelConsumption());
-        System.out.println("Avg. fuel consumption: " + secondCar.getAverageFuelConsumption());
-        System.out.println("Available fuel: " + secondCar.getAvailableFuel());
-        System.out.println("Consumption for this drive: " + secondCar.getCurrentFuelConsumption());
-
+        System.out.println("Consumption per 100Km: " + secondCar.getConsumptionPer100Km() + " litters per 100 km.");
+        System.out.println("Consumption for this drive: " + secondCar.getCurrentFuelConsumption() + " litters.");
+        System.out.println("Available fuel: " + secondCar.getAvailableFuel() + " litters.");
+        System.out.println("");
 
         Car thirdCar = new Corolla(40.0f, "T3323-1123Cor511");
         thirdCar.start();
@@ -95,11 +90,10 @@ public class Main {
         thirdCar.stop();
 
         System.out.println(thirdCar);
-        System.out.println("Consumption per 100Km: " + thirdCar.getConsumptionPer100Km());
-        System.out.println("Consumption for this drive: " + thirdCar.getCurrentFuelConsumption());
-        System.out.println("Avg. fuel consumption: " + thirdCar.getAverageFuelConsumption());
-        System.out.println("Available fuel: " + thirdCar.getAvailableFuel());
-        System.out.println("Consumption for this drive: " + thirdCar.getCurrentFuelConsumption());
+        System.out.println("Consumption per 100Km: " + thirdCar.getConsumptionPer100Km() + " litters per 100 km.");
+        System.out.println("Consumption for this drive: " + thirdCar.getCurrentFuelConsumption() + " litters.");
+        System.out.println("Available fuel: " + thirdCar.getAvailableFuel() + " litters.");
+        System.out.println("");
 
         Car fourthCar = new Yaris(40.0f, "t3324-6561Yar355");
         fourthCar.start();
@@ -115,7 +109,7 @@ public class Main {
         fourthCar.shiftGear(5);
         fourthCar.drive(18);
         fourthCar.shiftGear(6);
-        fourthCar.drive(189.4f);
+        fourthCar.drive(12345.4f);
         fourthCar.shiftGear(5);
         fourthCar.drive(0.5f);
         fourthCar.shiftGear(4);
@@ -127,11 +121,9 @@ public class Main {
         fourthCar.stop();
 
         System.out.println(fourthCar);
-        System.out.println("Consumption per 100Km: " + fourthCar.getConsumptionPer100Km());
-        System.out.println("Consumption for this drive: " + fourthCar.getCurrentFuelConsumption());
-        System.out.println("Avg. fuel consumption: " + fourthCar.getAverageFuelConsumption());
-        System.out.println("Available fuel: " + fourthCar.getAvailableFuel());
-        System.out.println("Consumption for this drive: " + fourthCar.getCurrentFuelConsumption());
+        System.out.println("Consumption per 100Km: " + fourthCar.getConsumptionPer100Km() + " litters per 100 km.");
+        System.out.println("Consumption for this drive: " + fourthCar.getCurrentFuelConsumption() + " litters.");
+        System.out.println("Available fuel: " + fourthCar.getAvailableFuel() + " litters.");
     }
 }
 
@@ -144,4 +136,5 @@ public class Main {
 *  2. Because consumption not working as intended, tireSize & gear doesn't have any effect over fuel consumption; ||
 * I'll attempt sorting this optional points later. (after finishing the other homeworks)
 *  3. Available fuel after the drive hasn't been updated to the new amount of fuel left (still shows the fuel tank size);
+*  4. Avg. fuel consumption - flaw?
 * */

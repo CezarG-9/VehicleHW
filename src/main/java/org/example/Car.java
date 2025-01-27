@@ -46,7 +46,13 @@ abstract class Car extends Vehicle {
     @Override
     public void drive(float km) {
         float consumptionForThisDrive = (consumptionPer100Km / 100) * km;
+        if (getAvailableFuel() - consumptionForThisDrive <= 0) {
+            System.out.println("Not enough fuel for this drive!");
+            return;
+        }
         currentFuelConsumption += consumptionForThisDrive;
+        setAvailableFuel(consumptionForThisDrive);
+
     }
 
     @Override
