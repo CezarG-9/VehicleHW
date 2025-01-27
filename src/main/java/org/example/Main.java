@@ -30,7 +30,8 @@ public class Main {
         System.out.println(car);
         System.out.println("Consumption per 100Km: " + car.getConsumptionPer100Km() + " litters per 100 km.");
         System.out.println("Consumption for this drive: " + car.getCurrentFuelConsumption() + " litters.");
-        System.out.println("Available fuel: " + car.getAvailableFuel() + " litters.");
+        System.out.println("Available fuel: " + car.getAvailableFuel() + " litters."
+        );
         System.out.println("");
 
         Car secondCar = new Megane(40.0f, "r2210-3512Meg512");
